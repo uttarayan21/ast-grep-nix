@@ -20,7 +20,7 @@
           sg scan -c ${config} ${src} \
             ${pkgs.lib.optionalString vColor "--color ${color}"} \
             ${pkgs.lib.optionalString (vFormat && !(isNull format)) "--format ${format}"} \
-            > $out
+            &> $out
         '';
       scan = src: scanWithOptions src {};
     };
